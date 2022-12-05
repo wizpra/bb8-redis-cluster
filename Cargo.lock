@@ -39,7 +39,7 @@ dependencies = [
  "async-trait",
  "bb8",
  "futures-util",
- "redis 0.22.1",
+ "redis",
  "redis_cluster_async",
  "tokio",
 ]
@@ -372,26 +372,6 @@ dependencies = [
 
 [[package]]
 name = "redis"
-version = "0.21.6"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "571c252c68d09a2ad3e49edd14e9ee48932f3e0f27b06b4ea4c9b2a706d31103"
-dependencies = [
- "async-trait",
- "bytes",
- "combine",
- "futures-util",
- "itoa",
- "percent-encoding",
- "pin-project-lite",
- "ryu",
- "sha1",
- "tokio",
- "tokio-util",
- "url",
-]
-
-[[package]]
-name = "redis"
 version = "0.22.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "513b3649f1a111c17954296e4a3b9eecb108b766c803e2b99f179ebe27005985"
@@ -404,6 +384,7 @@ dependencies = [
  "percent-encoding",
  "pin-project-lite",
  "ryu",
+ "sha1_smol",
  "tokio",
  "tokio-util",
  "url",
@@ -411,16 +392,15 @@ dependencies = [
 
 [[package]]
 name = "redis_cluster_async"
-version = "0.7.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6b2bda8e41b4abd38386c64fe61e3c2dda2df8cf2768d0b3a47ce060336f0fe0"
+version = "0.7.1-alpha.0"
+source = "git+https://github.com/wizpra/redis-cluster-async?tag=v0.7.0+patch1#07187f882e19305022f90a97ebe01ef9103bd85e"
 dependencies = [
  "crc16",
  "futures",
  "log",
  "pin-project-lite",
  "rand",
- "redis 0.21.6",
+ "redis",
  "tokio",
 ]
 
@@ -444,15 +424,6 @@ name = "scopeguard"
 version = "1.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d29ab0c6d3fc0ee92fe66e2d99f700eab17a8d57d1c1d3b748380fb20baa78cd"
-
-[[package]]
-name = "sha1"
-version = "0.6.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c1da05c97445caa12d05e848c4a4fcbbea29e748ac28f7e80e9b010392063770"
-dependencies = [
- "sha1_smol",
-]
 
 [[package]]
 name = "sha1_smol"
