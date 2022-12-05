@@ -10,7 +10,7 @@ rust-version = "1.56"
 [dependencies]
 async-trait = "0.1"
 bb8 = "0.8.0"
-redis = { version = "0.21.6", default-features = false, features = ["tokio-comp"] }
+redis = { version = "0.22.1", default-features = false, features = ["tokio-comp"] }
 redis_cluster_async="0.7.0"
 
 [dev-dependencies]
