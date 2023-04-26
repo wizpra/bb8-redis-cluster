@@ -40,7 +40,6 @@ dependencies = [
  "bb8",
  "futures-util",
  "redis",
- "redis_cluster_async",
  "tokio",
 ]
 
@@ -372,36 +371,26 @@ dependencies = [
 
 [[package]]
 name = "redis"
-version = "0.22.2"
+version = "0.23.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5c1aada340fba5deba625c84d109d0a83cc3565452d38083417992a702c2428d"
+checksum = "3ea8c51b5dc1d8e5fd3350ec8167f464ec0995e79f2e90a075b63371500d557f"
 dependencies = [
  "async-trait",
  "bytes",
  "combine",
+ "crc16",
+ "futures",
  "futures-util",
  "itoa",
+ "log",
  "percent-encoding",
  "pin-project-lite",
+ "rand",
  "ryu",
  "sha1_smol",
  "tokio",
  "tokio-util",
  "url",
-]
-
-[[package]]
-name = "redis_cluster_async"
-version = "0.7.1-alpha.0"
-source = "git+https://github.com/wizpra/redis-cluster-async?tag=v0.7.0+patch1.1#bc858822b9f4fdb45cc0a01c7347fb935f2b3438"
-dependencies = [
- "crc16",
- "futures",
- "log",
- "pin-project-lite",
- "rand",
- "redis",
- "tokio",
 ]
 
 [[package]]
