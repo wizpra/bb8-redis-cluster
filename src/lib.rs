@@ -5,13 +5,12 @@ use redis::cluster::ClusterClient;
 use redis::cluster_async::ClusterConnection;
 use redis::{ErrorKind, IntoConnectionInfo, RedisError};
 
-/// A `bb8::ManageConnection` for `redis_cluster_async::Client::get_connection`.
+/// A `bb8::ManageConnection` for `redis::cluster_async::ClusterConnection`.
 #[derive(Clone)]
 pub struct RedisConnectionManager {
     client: ClusterClient,
 }
 
-// Because redis_cluster_async::Client does not support Debug derive.
 impl std::fmt::Debug for RedisConnectionManager {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         f.debug_struct("RedisConnectionManager")
@@ -22,7 +21,6 @@ impl std::fmt::Debug for RedisConnectionManager {
 
 impl RedisConnectionManager {
     /// Create a new `RedisConnectionManager`.
-    /// See `redis_cluster_async::Client::open` for a description of the parameter types.
     pub fn new<T: IntoConnectionInfo>(infos: Vec<T>) -> Result<RedisConnectionManager, RedisError> {
         Ok(RedisConnectionManager {
             client: ClusterClient::new(infos)?,
