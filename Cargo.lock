@@ -372,9 +372,9 @@ dependencies = [
 
 [[package]]
 name = "redis"
-version = "0.21.6"
+version = "0.23.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "571c252c68d09a2ad3e49edd14e9ee48932f3e0f27b06b4ea4c9b2a706d31103"
+checksum = "3ea8c51b5dc1d8e5fd3350ec8167f464ec0995e79f2e90a075b63371500d557f"
 dependencies = [
  "async-trait",
  "bytes",
@@ -384,7 +384,7 @@ dependencies = [
  "percent-encoding",
  "pin-project-lite",
  "ryu",
- "sha1",
+ "sha1_smol",
  "tokio",
  "tokio-util",
  "url",
@@ -392,9 +392,9 @@ dependencies = [
 
 [[package]]
 name = "redis_cluster_async"
-version = "0.7.0"
+version = "0.8.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6b2bda8e41b4abd38386c64fe61e3c2dda2df8cf2768d0b3a47ce060336f0fe0"
+checksum = "20685e39276891bc517a3875910ccdae6672ebce0783515ef1260f4c7e681db2"
 dependencies = [
  "crc16",
  "futures",
@@ -425,15 +425,6 @@ name = "scopeguard"
 version = "1.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d29ab0c6d3fc0ee92fe66e2d99f700eab17a8d57d1c1d3b748380fb20baa78cd"
-
-[[package]]
-name = "sha1"
-version = "0.6.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c1da05c97445caa12d05e848c4a4fcbbea29e748ac28f7e80e9b010392063770"
-dependencies = [
- "sha1_smol",
-]
 
 [[package]]
 name = "sha1_smol"
