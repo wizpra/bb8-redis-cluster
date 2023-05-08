@@ -1,6 +1,6 @@
 [package]
 name = "bb8-redis-cluster"
-version = "0.1.0"
+version = "0.1.1"
 description = "Full-featured async (tokio-based) redis cluster connection pool (like r2d2)"
 license = "BSD-2-Clause"
 repository = "https://github.com/0xWOF/bb8-redis-cluster"
