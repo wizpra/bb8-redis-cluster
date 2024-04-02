@@ -64,7 +64,7 @@ dependencies = [
 
 [[package]]
 name = "bb8-redis-cluster"
-version = "0.3.0"
+version = "0.3.1"
 dependencies = [
  "async-trait",
  "bb8",
